@@ -44,37 +44,37 @@ public class PruebaEva03 {
 		assertEquals((Integer)4, nuevo.getNumeroDeSocio());
 	}
 	
-//	@Test
-//	public void  queSePuedanIncorporarDistintosDeportistas() {
-//		// El número de socio no se puede repetir
-//		Club actual = new Club("CARP");
-//		
-//		actual.agregarDeportista(new Corredor(1000, "Camila", 42000));
-//		actual.agregarDeportista(new Corredor(1001, "Natalia", 5000));
-//		actual.agregarDeportista(new Corredor(1002, "Jorge", 21000));
-//		actual.agregarDeportista(new Nadador(1003, "Lucrecia", "Pecho"));
-//		actual.agregarDeportista(new Triatleta(1004, "Tamara", "Olimpico", TipoDeBicicleta.RUTA));
-//		actual.agregarDeportista(new Ciclista(1005, "Alberto", "Mountain"));
-//		actual.agregarDeportista(new Ciclista(1006, "Domingo", "BMX"));
-//		actual.agregarDeportista(new Corredor(1007, "Luciana", 10000));
-//		actual.agregarDeportista(new Nadador(1008, "Luna", "Crol"));
-//		actual.agregarDeportista(new Nadador(1009, "Victor", "Mariposa"));
-//		actual.agregarDeportista(new Triatleta(1004, "Cecilia", "Ironman", TipoDeBicicleta.TRIA));
-//			
-//		assertEquals((Integer) 10, actual.getCantidadSocios());		
-//	}
-//	
-//	@Test (expected = NoEstaPreparado.class)
-//	public void  queUnCorredorNoSePuedaInscribirEnUnaCarreraDeNatacion () throws NoEstaPreparado{	
-//		// En las carreras de natación sólo pueden inscribirse los que sean INadador
-//		Deportista celeste = new Corredor(1000, "Celeste", 10000);
-//		Club actual = new Club("Sitas");
-//		actual.agregarDeportista(celeste);
-//		actual.crearEvento(TipoDeEvento.CARRERA_NATACION_EN_AGUAS_ABIERTAS, "Maraton de aguas abiertas");
-//		
-//		assertNotEquals((Integer)1, actual.inscribirEnEvento("Maraton de aguas abiertas", celeste));		
-//	}
-//	
+	@Test
+	public void  queSePuedanIncorporarDistintosDeportistas() {
+		// El número de socio no se puede repetir
+		Club actual = new Club("CARP");
+		
+		actual.agregarDeportista(new Corredor(1000, "Camila", 42000));
+		actual.agregarDeportista(new Corredor(1001, "Natalia", 5000));
+		actual.agregarDeportista(new Corredor(1002, "Jorge", 21000));
+		actual.agregarDeportista(new Nadador(1003, "Lucrecia", "Pecho"));
+		actual.agregarDeportista(new Triatleta(1004, "Tamara", "Olimpico", TipoDeBicicleta.RUTA));
+		actual.agregarDeportista(new Ciclista(1005, "Alberto", TipoDeBicicleta.MOUNTAIN));
+		actual.agregarDeportista(new Ciclista(1006, "Domingo", TipoDeBicicleta.BMX));
+		actual.agregarDeportista(new Corredor(1007, "Luciana", 10000));
+		actual.agregarDeportista(new Nadador(1008, "Luna", "Crol"));
+		actual.agregarDeportista(new Nadador(1009, "Victor", "Mariposa"));
+		actual.agregarDeportista(new Triatleta(1004, "Cecilia", "Ironman", TipoDeBicicleta.TRIA));
+			
+		assertEquals((Integer) 10, actual.getCantidadSocios());		
+	}
+	
+	@Test (expected = NoEstaPreparado.class)
+	public void  queUnCorredorNoSePuedaInscribirEnUnaCarreraDeNatacion () throws NoEstaPreparado{	
+		// En las carreras de natación sólo pueden inscribirse los que sean INadador
+		Deportista celeste = new Corredor(1000, "Celeste", 10000);
+		Club actual = new Club("Sitas");
+		actual.agregarDeportista(celeste);
+		actual.crearEvento(TipoDeEvento.CARRERA_NATACION_EN_AGUAS_ABIERTAS, "Maraton de aguas abiertas");
+		
+		assertNotEquals((Integer)1, actual.inscribirEnEvento("Maraton de aguas abiertas", celeste));		
+	}
+	
 //	@Test (expected = NoEstaPreparado.class)
 //	public void  queUnCorredorNoSePuedaInscribirEnUnTriatlon () throws NoEstaPreparado{		
 //		// En los triatlones sólo pueden inscribirse los que sean INadador & ICiclista
