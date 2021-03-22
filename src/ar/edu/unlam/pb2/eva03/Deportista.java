@@ -5,6 +5,7 @@ public class Deportista implements Comparable<Deportista> {
 	protected Integer numeroDeSocio;
 	protected String nombre;
 	protected String estilo;
+	protected Integer cantidadDeKilometrosEntrenados;
 	
 	public Deportista(Integer numero, String nombre) {
 		super();
@@ -21,11 +22,6 @@ public class Deportista implements Comparable<Deportista> {
 		return nombre;
 	}
 	
-	public String getEstilo() {
-		return estilo;
-	}
-
-
 	@Override
 	public int compareTo(Deportista a) {
 		int numero=numeroDeSocio.compareTo(a.getNumeroDeSocio());

@@ -17,16 +17,16 @@ public class PruebaEva03 {
 		assertEquals((Integer)1, nuevo.getNumeroDeSocio());
 	}
 	
-//	@Test
-//	public void queSePuedaCrearUnCorredor() {
-//		Corredor nuevo = new Corredor(2, "Carolina", 10000);
-//		nuevo.setCantidadDeKilometrosEntrenados(50000);
-//		
-//		assertEquals((Integer)10000, nuevo.getDistanciaPreferida());
-//		assertEquals((Integer)50000, nuevo.getCantidadDeKilometrosEntrenados());
-//		assertEquals((Integer)2, nuevo.getNumeroDeSocio());
-//	}
-//	
+	@Test
+	public void queSePuedaCrearUnCorredor() {
+		Corredor nuevo = new Corredor(2, "Carolina", 10000);
+		nuevo.setCantidadDeKilometrosEntrenados(50000);
+		
+		assertEquals((Integer)10000, nuevo.getDistanciaPreferida());
+		assertEquals((Integer)50000, nuevo.getCantidadDeKilometrosEntrenados());
+		assertEquals((Integer)2, nuevo.getNumeroDeSocio());
+	}
+	
 //	@Test
 //	public void  queSePuedaCrearUnCiclista() {
 //		Ciclista nuevo = new Ciclista(3, "Enzo", "Ruta");
