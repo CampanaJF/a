@@ -1,11 +1,14 @@
 package ar.edu.unlam.pb2.eva03;
 
-public class Deportista implements Comparable<Deportista> {
+import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeBicicleta;
+
+public abstract class Deportista implements Comparable<Deportista> {
 
 	protected Integer numeroDeSocio;
 	protected String nombre;
 	protected String estilo;
 	protected Integer cantidadDeKilometrosEntrenados;
+	protected TipoDeBicicleta tipoBici;
 	
 	public Deportista(Integer numero, String nombre) {
 		super();

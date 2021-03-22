@@ -27,23 +27,23 @@ public class PruebaEva03 {
 		assertEquals((Integer)2, nuevo.getNumeroDeSocio());
 	}
 	
-//	@Test
-//	public void  queSePuedaCrearUnCiclista() {
-//		Ciclista nuevo = new Ciclista(3, "Enzo", "Ruta");
-//
-//		assertEquals("Ruta", nuevo.getTipoDeBicicleta());
-//		assertEquals((Integer) 3, nuevo.getNumeroDeSocio());
-//	}
-//
-//	@Test
-//	public void  queSePuedaCrearUnTriatleta() {
-//		Triatleta nuevo = new Triatleta(4, "Luna", "Olimpico", TipoDeBicicleta.TRIA);
-//		
-//		assertEquals("Olimpico", nuevo.getDistanciaPreferida());
-//		assertEquals(TipoDeBicicleta.TRIA, nuevo.getTipoDeBicicleta());
-//		assertEquals((Integer)4, nuevo.getNumeroDeSocio());
-//	}
-//	
+	@Test
+	public void  queSePuedaCrearUnCiclista() {
+		Ciclista nuevo = new Ciclista(3, "Enzo", TipoDeBicicleta.RUTA);
+
+		assertEquals(TipoDeBicicleta.RUTA, nuevo.getTipoDeBicicleta());
+		assertEquals((Integer) 3, nuevo.getNumeroDeSocio());
+	}
+
+	@Test
+	public void  queSePuedaCrearUnTriatleta() {
+		Triatleta nuevo = new Triatleta(4, "Luna", "Olimpico", TipoDeBicicleta.TRIA);
+		
+		assertEquals("Olimpico", nuevo.getDistanciaPreferida());
+		assertEquals(TipoDeBicicleta.TRIA, nuevo.getTipoDeBicicleta());
+		assertEquals((Integer)4, nuevo.getNumeroDeSocio());
+	}
+	
 //	@Test
 //	public void  queSePuedanIncorporarDistintosDeportistas() {
 //		// El número de socio no se puede repetir
